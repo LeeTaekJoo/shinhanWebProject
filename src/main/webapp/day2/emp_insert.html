@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>직원등록1</title>
+<style>
+
+	
+	h1{
+		border: 5px dotted white;
+		background-color: purple;
+		color: white;
+		text-align: center;
+	}
+	
+	.head{
+		background-color: lightgreen;
+		text-align: center;
+	}
+
+	.botton{
+		text-align: center;
+	}
+</style>
+
+
+</head>
+<body>
+	<h1>직원정보 입력</h1>
+	<form action="empInsert.jsp">
+		<table>
+			<tr>
+				<td class="head">EMPLOYEE_ID</td>
+				<td><input type="number" name="employee_id" required="required"
+					placeholder="직원번호는sequence처리함" value="200"></td>
+			</tr>
+			<tr>
+				<td class="head">FIRST_NAME</td>
+				<td><input type="text" name="first_name"></td>
+			</tr>
+			<tr>
+				<td class="head">LAST_NAME</td>
+				<td><input type="text" name="last_name" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td class="head">EMAIL</td>
+				<td><input type="email" name="email" required="required">
+				</td>
+			</tr>
+			<tr>
+				<td class="head">PHONE_NUMBER</td>
+				<td><input type="tel" name="phone_number"
+					pattern="010-[0-9]{4}-[0-9]{4}" value="010-1234-1234"></td>
+			</tr>
+			<tr>
+				<td class="head">HIRE_DATE</td>
+				<td><input type="date" name="hire_date" required="required"
+					value="2021/01/10"></td>
+			</tr>
+			<tr>
+				<td class="head">JOB_ID</td>
+				<td><input type="text" name="job_id" required="required"
+					value="IT_PROG"></td>
+			</tr>
+			<tr>
+				<td class="head">SALARY</td>
+				<td><input type="number" name="salary"></td>
+			</tr>
+			<tr>
+				<td class="head">COMMISSION_PCT</td>
+				<td><input type="text" name="commission_pct"></td>
+			</tr>
+			<tr>
+				<td class="head">DEPARTMENT_ID</td>
+				<td><input type="number" name="department_id"></td>
+			</tr>
+			<tr>
+				<td class="head">MANAGER_ID</td>
+				<td><input type="number" name="manager_id" value="100">
+				</td>
+			</tr>
+			
+			<tr class="botton">
+				<td colspan="2"><input type="submit" value="직원등록"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -16,12 +16,99 @@
 	 </style>
   </head>
   <body>
-	<form>
+	<form action="aa.jsp">
     <fieldset>
     	<label>아이디: <input type="text" id="user_id" size="10"></label>
       <label>비밀번호: <input type="password" id="user_pw" size="10"></label>
       <input type="submit" value="로그인">
     </fieldset>
+    <fieldset>
+    	1. 생략<input autofocus><br>
+    	2. text<input type="text" placeholder="이름을입력하세요"><br>
+    	3. hidden<input type="hidden"><br>
+    	4. password<input type="password"><br>
+    	5. email<input type="email" value="11ltj12@naver.com" readonly><br>
+    	6. tel<input type="tel" parttern="010-[0-9]{4}-[0-9]{4}"><br>
+    	7. url<input type="url" required="required"><br>
+    	8. search <input type="search"><br>
+    	9. number <input type="number" min="1" max="10" value="5"><br>
+    	10. range <input type="range" min="1" max="10" value="5"><br>
+    	11. radio 
+    		남자<input type="radio" value="M" name="gender">
+    		여자<input type="radio" value="F" name="gender">
+    		<br>
+    		전공
+    		컴공<input type="radio" value="A" name="major">
+    		기계<input type="radio" value="A" name="major" checked="checked">
+    		생명<input type="radio" value="A" name="major">
+			<br>
+			12 checkbox(서로 독립적) <br>
+			<!-- id는 front에서 사용한다. -->
+			<!-- name은 Backend에서 사용한다. -->
+			<label for="aa">짜장면<input id="aa" type="checkbox" value="짜장면" name="lunch"></label>
+			순대국<input type="checkbox" value="F" name="lunch">
+			김밥<input type="checkbox" value="G" name="lunch">
+			<br>
+			13. color<input type="color"><br>
+			14. date<input type="date"><br>
+			15. datetime<input type="datetime"><br>
+			16. datetime-local<input type="datetime-local"><br>
+			17. month<input type="month"><br>
+			18. week<input type="week"><br>
+			19. reset<input type="reset"><br>
+			20. image<input type="image" src="images/login.jpg"><br>
+			21. 선택(single, multiple) <br>
+			<select multiple="multiple">
+				<option>짜장면</option>
+				<option>짬뽕</option>
+				<option>라면</option>
+				<option>스시</option>
+				<option selected>삼겹살</option>
+			</select>
+			<br>
+			22. <span class="reg">관심분야</span>
+					<label for="interest"></label>
+					<input type="text" id="interest" list="choices">
+					<datalist id="choices">
+						<option value="grammar" label="문법"></option>
+						<option value="voca" label="어휘"></option>
+						<option value="speaking" label="회화"></option>
+						<option value="listening" label="리스닝"></option>
+						<option value="news" label="뉴스청취"></option>
+					</datalist>
+			<br>	
+			23. textarea
+			<textarea rows="10" cols="10"></textarea>
+			<br>
+			24. 버튼
+			<input type="button" value="input버튼">
+			<input type="image" src="images/login.jpg">
+			<input type="submit" value="서버로전송">
+			<input type="reset" value="초기화">
+			<button>버튼2 .. submit</button>
+			<br>
+			26. progress
+			<progress value="30" max="100"></progress>
+			
+    </fieldset>
   </form>
+  
+  <h2>Form새로만듦</h2>
+  <form oninput="result.value=parseInt(num1.value) + parseInt(num2.value)">
+  	25. output
+			<input type="number" name="num1" value="10">
+			<input type="number" name="num2" value="20">
+			<output name="result"></output>
+  </form>
+  
+  <button>Form밖에 있는 button</button>
+  <button onclick="call()">JavaScript연습</button>
+  <script>
+  	function call(){
+  		var a = document.getElementById("aa");
+  		alert(a.value);
+  	}
+  </script>
+  
   </body>
 </html>
